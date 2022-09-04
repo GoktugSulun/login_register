@@ -4,7 +4,7 @@ import AuthenticationContext from '../Context/Context';
 
 const Register = () => {
    const store = useContext(AuthenticationContext);
-  const { login: { setIsLoginActive }, register: { setIsRegisterActive }} = store;
+  const { setIsLoginActive } = store;
 
   const goToLoginPageHandler = () => {
     setIsLoginActive(true);

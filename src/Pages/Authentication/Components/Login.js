@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
+import TextInput from '../../../Core/Inputs/TextInput';
 import { LoginWrapper } from '../Authencation.style';
 import AuthenticationContext from '../Context/Context';
 
 const Login = () => {
   const store = useContext(AuthenticationContext);
-  const { login: { setIsLoginActive }, register: { setIsRegisterActive }} = store;
+  const { setIsLoginActive } = store;
 
   const goToRegisterPageHandler = () => {
     setIsLoginActive(false);
@@ -12,6 +13,7 @@ const Login = () => {
 
   return (
     <LoginWrapper>
+      <TextInput />
       <button type="button" onClick={goToRegisterPageHandler}> Register </button>
     </LoginWrapper>
   )

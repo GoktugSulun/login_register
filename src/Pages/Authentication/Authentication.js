@@ -7,26 +7,19 @@ import AuthenticationContext from './Context/Context';
 
 const Authentication = () => {
    const [isLoginActive, setIsLoginActive] = useState(null);
-   const [isRegisterActive, setIsRegisterActive] = useState(null);
    const [leftClassName, setLeftClassName] = useState("left");
    const [rightClassName, setRightClassName] = useState("right");
    const [imageClassName, setImageClassName] = useState("image");
 
-  const store = useMemo(() => {
-   return {
-      login: {
+  const store = useMemo(() => (
+      {
          isLoginActive,
          setIsLoginActive
-      },
-      register: {
-         isRegisterActive,
-         setIsRegisterActive
       }
-   }
-  }, [isLoginActive, isRegisterActive])
+  ), [isLoginActive])
 
   useEffect(() => {
-   const { login: {isLoginActive}, register: {isRegisterActive} } = store;
+   const { isLoginActive } = store;
    if (isLoginActive) {
       setIsLoginActive(true);
    }

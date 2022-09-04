@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const AuthenticationWrapper = styled.div`
    width: 100vw;
@@ -67,7 +67,6 @@ export const AuthenticationWrapper = styled.div`
 `;
 
 export const LoginWrapper = styled.div`
-   background-color: red;
    padding: 50px;
    width: 100%;
    height: 100%;

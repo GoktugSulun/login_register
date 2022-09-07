@@ -36,6 +36,7 @@ export const AuthenticationWrapper = styled.div`
          opacity: 0;
          visibility: hidden;
          scale: 0;
+         overflow: hidden;
       }
    }
 
@@ -62,6 +63,26 @@ export const AuthenticationWrapper = styled.div`
       svg {
          width: 90%;
          height: 100%;
+      }
+   }
+
+   @media (max-width: 900px) {
+      .image {
+         &__right {
+            left: 100%;
+            width: 0;
+         }
+
+         &__left {
+            left: -50%;
+            width: 0;
+         }
+      }
+
+      .left, .right {
+         &__inactive {
+            flex: 0;
+         }
       }
    }
 `;

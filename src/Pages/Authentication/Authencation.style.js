@@ -46,7 +46,7 @@ export const AuthenticationWrapper = styled.div`
       width: 50%;
       height: 100%;
       z-index: 9999;
-      background-color: #F6F6F6;
+      background-color: #731896;
       display: flex;
       justify-content: center;
       transition: all 500ms;
@@ -67,9 +67,45 @@ export const AuthenticationWrapper = styled.div`
 `;
 
 export const LoginWrapper = styled.div`
-   padding: 50px;
-   width: 100%;
-   height: 100%;
+   width: 70%;
+
+   .content {
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 30px;
+
+      &__title {
+         color: #731896;
+         margin-bottom: 20px;
+      }
+
+      .MuiInputBase-root.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+         border-color: #731896;
+      }
+
+      .MuiFormLabel-root.MuiInputLabel-root.Mui-focused {
+         color: #731896;
+      }
+
+      &__footer {
+         margin-top: 30px;
+
+         p {
+            color: #731896;
+
+            span {
+               display: inline-block;
+               margin-left: 10px;
+               text-decoration: underline;
+               cursor: pointer;
+               font-weight: bold;
+            }
+         }
+      }
+   }
 `;
 
 export const RegisterWrapper = styled.div`

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import TextInput from '../../../Core/Inputs/TextInput';
+import { CustomButton } from '../../../Components/Button/Button.style';
+import TextInput from '../../../Components/Inputs/TextInput';
 import { LoginWrapper } from '../Authencation.style';
 import AuthenticationContext from '../Context/Context';
 
@@ -13,8 +14,23 @@ const Login = () => {
 
   return (
     <LoginWrapper>
-      <TextInput />
-      <button type="button" onClick={goToRegisterPageHandler}> Register </button>
+      <div className="content">
+        <h1 className="content__title"> LOGIN </h1>
+        <TextInput
+          label="Email"
+        />
+        <TextInput
+          label="Password"
+        />
+        <CustomButton> Login </CustomButton>
+
+        <div className="content__footer">
+          <p> 
+            Don't you have an account ? 
+            <span onClick={goToRegisterPageHandler}>Click here</span> 
+          </p>
+        </div>
+      </div>
     </LoginWrapper>
   )
 }

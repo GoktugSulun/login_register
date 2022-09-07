@@ -90,6 +90,10 @@ export const LoginWrapper = styled.div`
          color: #731896;
       }
 
+      .MuiButtonBase-root.MuiButton-root.Mui-disabled {
+         background-color: #ccc;
+      }
+
       &__footer {
          margin-top: 30px;
 

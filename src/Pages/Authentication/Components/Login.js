@@ -44,9 +44,13 @@ const Login = () => {
   }
 
   useEffect(() => {
-    const bool = Object.keys(formik.touched).length > 0 && Object.keys(formik.errors).length > 0;
+    const bool = formik.submitCount !== 0 && Object.keys(formik.errors).length > 0;
     setIsDisabledLoginButton(bool);
-  }, [formik.touched, formik.errors]);
+  }, [formik.submitCount, formik.errors]);
+
+  useEffect(() => {
+    console.log(formik, ' formik');
+  }, [formik]);
 
   return (
     <LoginWrapper>

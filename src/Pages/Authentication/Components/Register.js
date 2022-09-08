@@ -95,10 +95,8 @@ const Register = () => {
         </CustomButton>
 
         <div className="content__footer">
-          <p> 
-            Do you have already an account ? 
-            <span onClick={goToLoginPageHandler}>Click here</span> 
-          </p>
+          <span>Do you have already an account ?</span> 
+          <span onClick={goToLoginPageHandler}>Click here</span> 
         </div>
       </div>
     </LoginRegisterWrapper>

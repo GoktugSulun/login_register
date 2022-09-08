@@ -70,10 +70,8 @@ const Login = () => {
         </CustomButton>
 
         <div className="content__footer">
-          <p> 
-            Don't you have an account ? 
-            <span onClick={goToRegisterPageHandler}>Click here</span> 
-          </p>
+          <span>Don't you have an account ?</span> 
+          <span onClick={goToRegisterPageHandler}>Click here</span> 
         </div>
       </div>
     </LoginRegisterWrapper>

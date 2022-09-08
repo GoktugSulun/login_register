@@ -90,6 +90,7 @@ export const AuthenticationWrapper = styled.div`
 
 export const LoginRegisterWrapper = styled.div`
    width: 70%;
+   transition: width 300ms;
 
    .content {
       border-radius: 10px;
@@ -118,22 +119,23 @@ export const LoginRegisterWrapper = styled.div`
 
       &__footer {
          margin-top: 30px;
+         display: flex;
+         gap: 5px 10px;
+         flex-wrap: wrap;
 
-         p {
+         span {
             color: #731896;
 
-            span {
-               display: inline-block;
-               margin-left: 10px;
+            &:last-child {
+               font-weight: bold; 
                text-decoration: underline;
                cursor: pointer;
-               font-weight: bold;
             }
          }
       }
    }
-`;
 
-export const RegisterWrapper = styled.div`
-
+   @media (max-width: 600px) {
+      width: 90%;
+   }
 `;

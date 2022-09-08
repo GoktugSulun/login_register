@@ -47,10 +47,6 @@ const Login = () => {
     setIsDisabledLoginButton(bool);
   }, [formik.submitCount, formik.errors]);
 
-  useEffect(() => {
-    console.log(formik, ' formik');
-  }, [formik]);
-
   return (
     <LoginRegisterWrapper>
       <div className="content">

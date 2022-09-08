@@ -68,6 +68,7 @@ export const AuthenticationWrapper = styled.div`
 
    @media (max-width: 900px) {
       .image {
+
          &__right {
             left: 100%;
             width: 0;
@@ -87,7 +88,7 @@ export const AuthenticationWrapper = styled.div`
    }
 `;
 
-export const LoginWrapper = styled.div`
+export const LoginRegisterWrapper = styled.div`
    width: 70%;
 
    .content {

@@ -1,9 +1,8 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import { useFormik } from 'formik';
 import React, { useContext, useEffect, useState } from 'react';
 import { CustomButton } from '../../../Components/Button/Button.style';
 import TextInput from '../../../Components/Inputs/TextInput';
-import { LoginWrapper } from '../Authencation.style';
+import { LoginRegisterWrapper } from '../Authencation.style';
 import AuthenticationContext from '../Context/Context';
 
 const validate = (values) => {
@@ -53,7 +52,7 @@ const Login = () => {
   }, [formik]);
 
   return (
-    <LoginWrapper>
+    <LoginRegisterWrapper>
       <div className="content">
         <h1 className="content__title"> LOGIN </h1>
         <TextInput
@@ -81,7 +80,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </LoginWrapper>
+    </LoginRegisterWrapper>
   )
 }
 

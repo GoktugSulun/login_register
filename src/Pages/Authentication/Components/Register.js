@@ -9,27 +9,27 @@ const validate = (values) => {
   const errors = {};
 
   if (!values.userFullname) {
-    errors.userFullname = 'Boş bırakılamaz!';
+    errors.userFullname = 'Required!';
   }
 
   if (!values.userEmail) {
-    errors.userEmail = 'Boş bırakılamaz!';
+    errors.userEmail = 'Required!';
   } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.userEmail))) {
-    errors.userEmail = 'Lütfen geçerli bir email giriniz!';
+    errors.userEmail = 'Please enter a valid email!';
   }
 
   if (!values.userPassword) {
-    errors.userPassword = 'Boş bırakılamaz!';
+    errors.userPassword = 'Required!';
   } else if (values.userPassword.length < 6) {
-    errors.userPassword = 'Lütfen en az 6 haneli bir şifre giriniz!';
+    errors.userPassword = 'Please enter a password with at least 6 characters';
   }
 
   if (!values.userRPassword) {
-    errors.userRPassword = 'Boş bırakılamaz!';
+    errors.userRPassword = 'Required!';
   } else if (values.userRPassword.length < 6) {
-    errors.userRPassword = 'Lütfen en az 6 haneli bir şifre giriniz!';
+    errors.userRPassword = 'Please enter a password with at least 6 characters';
   } else if (values.userRPassword !== values.userPassword) {
-    errors.userRPassword = 'Şifreler uyuşmuyor!';
+    errors.userRPassword = 'Passwords don\'t match!';
   }
 
   return errors;
@@ -91,12 +91,12 @@ const Register = () => {
           disabled={isDisabledRegisterButton} 
           onClick={() => formik.handleSubmit()}
         > 
-          Login 
+          Register 
         </CustomButton>
 
         <div className="content__footer">
           <p> 
-            Don't you have an account ? 
+            Do you have already an account ? 
             <span onClick={goToLoginPageHandler}>Click here</span> 
           </p>
         </div>

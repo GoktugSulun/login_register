@@ -9,15 +9,15 @@ const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
-    errors.email = 'Boş bırakılamaz!';
+    errors.email = 'Required!';
   } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email))) {
-    errors.email = 'Lütfen geçerli bir email giriniz!';
+    errors.email = 'Please enter a valid email!';
   }
 
   if (!values.password) {
-    errors.password = 'Boş bırakılamaz!';
+    errors.password = 'Required!';
   } else if (values.password.length < 6) {
-    errors.password = 'Lütfen en az 6 haneli bir şifre giriniz!';
+    errors.password = 'Please enter a password with at least 6 characters';
   }
 
   return errors;
